@@ -15,12 +15,9 @@ services:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:rigel.saipantech.com"
 
-
-
-
   # Configuration for reverse proxy
   reverse-proxy:
-    image: traefik
+    image: traefik:v1.7.16
     ports:
       - "80:80"
       - "443:443"
